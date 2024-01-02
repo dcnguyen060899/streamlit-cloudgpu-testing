@@ -39,5 +39,5 @@
 
 import getpass
 streamlituser = getpass.getuser()
-st.write(f"The Streamlit app is running as: {streamlituser}")
+print(f"The Streamlit app is running as: {streamlituser}")
 
