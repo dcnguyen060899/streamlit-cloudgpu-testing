@@ -43,6 +43,7 @@ def connect_to_runpod(ssh_private_key_path, passphrase=None):
         private_key = paramiko.Ed25519Key.from_private_key_file(ssh_private_key_path='/root/.ssh/id_ed25519', password=passphrase)
         ssh_client.connect(hostname='94.155.194.99', username='dcnguyen060899', pkey=private_key)
         # Proceed with your operations...
+        print('it works')
     except Exception as e:
         print(f"An error occurred: {e}")
         # Handle exceptions or errors
