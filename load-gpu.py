@@ -37,7 +37,13 @@
 #             st.text_area('GPU Status:', output, height=300)
 #         ssh_client.close()
 
+import streamlit as st
 import getpass
+
+# Get the username of the user running the Streamlit app
 streamlituser = getpass.getuser()
-print(f"The Streamlit app is running as: {streamlituser}")
+
+# Write the username to the Streamlit app
+st.write(f"The Streamlit app is running as: {streamlituser}")
+
 
