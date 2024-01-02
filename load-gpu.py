@@ -23,9 +23,11 @@ if st.button('Connect to RunPod.io'):
     ssh_client = connect_to_runpod(
         ssh_private_key_path='/path/to/your/private/key',  # Securely provide your SSH private key path here
         public_ip='94.155.194.99',
-        external_port=10584
+        external_port=10573
     )
     # Example command to run on RunPod.io
     output = execute_command_on_runpod(ssh_client, 'nvidia-smi')  # Command to check GPU status
     ssh_client.close()  # Don't forget to close the client after you're done
     st.text_area('GPU Status:', output, height=300)
+
+paramiko.util.log_to_file('paramiko.log')
