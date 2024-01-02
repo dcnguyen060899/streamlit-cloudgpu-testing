@@ -21,7 +21,7 @@ def execute_command_on_runpod(ssh_client, command):
 # Streamlit interface to trigger the SSH command
 if st.button('Connect to RunPod.io'):
     ssh_client = connect_to_runpod(
-        ssh_private_key_path='/root/.ssh/id_ed25519',  # Securely provide your SSH private key path here
+        ssh_private_key_path='/root/.ssh/id_ed25519.pub',  # Securely provide your SSH private key path here
         public_ip='94.155.194.99',
         external_port=10573
     )
