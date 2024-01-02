@@ -36,3 +36,8 @@ if st.button('Connect to RunPod.io'):
         if output:
             st.text_area('GPU Status:', output, height=300)
         ssh_client.close()
+
+import getpass
+streamlituser = getpass.getuser()
+print(f"The Streamlit app is running as: {streamlituser}")
+
