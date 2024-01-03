@@ -57,6 +57,7 @@ def connect_to_runpod(ssh_key_content, hostname, port, username, passphrase=None
         return ssh_client
     except Exception as e:
         st.error(f"An error occurred: {e}")
+        paramiko.util.log_to_file('paramiko.log')
         return None
 
 # Use environment variables or Streamlit secrets to store sensitive information
@@ -82,5 +83,3 @@ if st.button('Connect to RunPod.io'):
             if error:
                 st.error('Error: ' + error)
             ssh_client.close()
-
-paramiko.util.log_to_file('paramiko.log')
