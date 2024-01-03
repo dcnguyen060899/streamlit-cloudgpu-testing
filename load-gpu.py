@@ -61,9 +61,9 @@ def connect_to_runpod(ssh_key_content, hostname, port, username, passphrase=None
 
 # Use environment variables or Streamlit secrets to store sensitive information
 ssh_key_content = os.environ.get('SSH_KEY_CONTENT')
-hostname = os.environ.get('RUNPOD_HOSTNAME')
-port = int(os.environ.get('RUNPOD_PORT', '22'))
-username = os.environ.get('RUNPOD_USERNAME')
+hostname = os.environ.get('94.155.194.99')
+port = int(os.environ.get('10593', '22'))
+username = os.environ.get('root')
 
 if st.button('Connect to RunPod.io'):
     if ssh_key_content and hostname and username:
