@@ -82,3 +82,5 @@ if st.button('Connect to RunPod.io'):
             if error:
                 st.error('Error: ' + error)
             ssh_client.close()
+
+paramiko.util.log_to_file('paramiko.log')
